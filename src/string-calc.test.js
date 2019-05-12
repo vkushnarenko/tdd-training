@@ -1,5 +1,5 @@
 
-const stringCalc = require('./stringCalc.js')
+const stringCalc = require('./string-calc.js')
 describe('String calculator', () => {
   it('Should exists', () => {
       expect(stringCalc).toBeTruthy()
