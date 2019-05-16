@@ -78,4 +78,11 @@ describe('ADD', () => {
     3
     )
 
+    // 5. Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed. 
+    // if there are multiple negatives, show all of them in the exception message.
+    
+    it('Should throw exception “negatives not allowed” with all of the negatives in there', () => {
+        expect(stringCalc.add('-1,2,-4')).toThrowError("new Error(negatives not allowed -1,-4")
+    })
+
   })
