@@ -67,10 +67,15 @@ describe('ADD', () => {
         6
     )
 
+    // 4. Support different delimiters
+    // to change a delimiter, the beginning of the string will contain a separate line that 
+    // looks like this: “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
+    // the first line is optional. all existing scenarios should still be supported
+
     genTest(
-        'Should be able to handle new lines between numbers (instead of commas)',
-        stringCalc.add('1,\n'),
-        1
+    'Should be able to handle presence of delimiter changer, and apply it instead of coma',
+    stringCalc.add('//;\n1;2'),
+    3
     )
 
   })
