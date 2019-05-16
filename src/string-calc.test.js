@@ -12,26 +12,36 @@ const genTest = (title, actual, expected) => {
     })
 }
 
+// 1. int Add(string numbers)
+// ———————————————
+// The method can take up to two numbers, separated by commas, and will return their sum. 
+// for example “” or “1” or “1,2” as inputs.
+// (for an empty string it will return 0) 
+// Hints:
+// ——————
+//  - Start with the simplest test case of an empty string and move to one and two numbers
+//  - Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
+//  - Remember to refactor after each passing test
+// ———————————————————————————————
 
 describe('ADD', () => {
     genTest(
-        'test gen',
+        'Should be able to handle empty string and return 0',
+        stringCalc.add(""),
+        0
+    )
+
+    genTest(
+        'Should be able to handle one param',
+        stringCalc.add('1'),
+        1
+    )
+
+    genTest(
+        'Should be able to handle two params and add them',
         stringCalc.add('1,2'),
         3
     )
 
-    it('Should add two numbers separated by coma', () => {
-        const actual = stringCalc.add('1,2')
-        const expected = 3
-        expect(actual).toEqual(expected)
-    })
-    it('Should add two numbers separated by coma', () => {
-        const actual = stringCalc.add('3,4')
-        const expected = 7
-        expect(actual).toEqual(expected)
-    })
-  })
 
- // test + realization 1 commit
- //https://osherove.com/tdd-kata-1
- //https://github.com/sseletskyy-apixio/tdd-training
+  })
