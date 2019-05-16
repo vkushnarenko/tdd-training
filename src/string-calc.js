@@ -11,7 +11,7 @@ const add = (str) => {
     var negativeArr = arrayOfNumbers.filter((number) => number < 0 )
 
     if (negativeArr.length > 0) {
-     throw new Error("negatives not allowed -1,-4" + negativeArr.join())
+     throw new Error("negatives not allowed " + negativeArr.join())
     }
 
   return  arrayOfNumbers.reduce((acc,next) => acc + Number(next), 0)
